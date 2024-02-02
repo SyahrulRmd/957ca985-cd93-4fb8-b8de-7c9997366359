@@ -12,7 +12,9 @@ export default async function Search({ searchParams }: { searchParams: { [key: s
   return (
     <main className="container mt-28">
       <div className='mb-10'>
-        <Searchbar />
+        <Suspense fallback={<Skeleton className='w-full h-11' />}>
+          <Searchbar />
+        </Suspense>
       </div>
       <Suspense
         key={searchParams.q}
