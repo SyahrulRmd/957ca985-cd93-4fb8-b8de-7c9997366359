@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className="container mt-28">
       <div className='mb-10'>
-        <Suspense fallback={<Skeleton className='w-full h-11' />}>
+        <Suspense fallback={<Skeleton className='w-full h-10' />}>
           <Searchbar />
         </Suspense>
       </div>
